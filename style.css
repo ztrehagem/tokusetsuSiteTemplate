@@ -1,0 +1,282 @@
+@charset "UTF-8";
+/**** グローバル設定 ****/
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 200vh;
+  font-size: 1.2rem;
+  font-family: Meiryo, 'Hiragino Kaku Gothic ProN', sans-serif;
+}
+
+img {
+  border: none;
+}
+
+/**** ヘッダ ****/
+header {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  background-color: #323232;
+  color: white;
+  display: flex;
+  width: 100%;
+  height: 3rem;
+  line-height: 3rem;
+}
+
+header > span {
+  flex-basis: 50%;
+  flex-grow: 1;
+  flex-shrink: 1;
+  padding: 0 2%;
+}
+
+header > span.album_title {
+  text-align: left;
+}
+
+header > span.tweet_intent {
+  text-align: right;
+  padding: 0 2%;
+}
+
+header > span.tweet_intent > a {
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/**** トップ ****/
+section#top {
+  background-color: rgba(255, 144, 0, 0.5);
+  height: 100vh;
+}
+
+/**** デモ ****/
+section#demo {
+  position: relative;
+}
+
+section#demo > iframe {
+  z-index: 1;
+}
+
+section#demo > div.cover {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  display: none;
+  width: 100%;
+  background-color: white;
+  text-align: center;
+  cursor: pointer;
+}
+
+section#demo > div.cover:hover {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+section#demo > div.cover > span {
+  display: none;
+  vertical-align: middle;
+}
+
+/**** 詳細 ****/
+section#detail {
+  padding: 10rem 0;
+  background-color: #ff9000;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+}
+
+section#detail > * {
+  width: 95%;
+  max-width: 30rem;
+  margin: 1rem 2%;
+}
+
+section#detail > ol#track_list {
+  box-sizing: border-box;
+}
+
+section#detail > ol#track_list > li {
+  margin: 2rem 0;
+}
+
+section#detail > ol#track_list > li::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+section#detail > ol#track_list > li > span {
+  padding-left: 1rem;
+  white-space: nowrap;
+}
+
+section#detail > ol#track_list > li > span:last-child {
+  float: right;
+}
+
+/**** インフォメーション ****/
+section#info {
+  padding: 10rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  align-content: flex-start;
+}
+
+section#info > article {
+  flex-basis: 20rem;
+  flex-shrink: 1;
+  flex-grow: 1;
+  width: 95%;
+  max-width: 20rem;
+  margin: 1rem 2%;
+  border: 1px solid #323232;
+  border-radius: 3px;
+  padding: 1rem;
+  line-height: 2rem;
+  color: #323232;
+}
+
+section#info > article a {
+  color: #323232;
+}
+
+section#info > article a:hover {
+  text-decoration: none;
+}
+
+section#info::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/**** ジャケットダウンロード ****/
+section#jacket {
+  padding: 10rem 0;
+  background-color: #ff9000;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+}
+
+section#jacket > img {
+  width: 100%;
+  max-width: 300px;
+  margin: 1rem;
+}
+
+section#jacket > p {
+  margin: 1rem;
+  padding: 0;
+}
+
+section#jacket > p > a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 1rem;
+  border: 1px solid white;
+  border-radius: 3px;
+  transition: 0.2s;
+  white-space: nowrap;
+}
+
+section#jacket > p > a:hover {
+  box-shadow: 0 0 10px 4px rgba(255, 255, 255, 0.4) inset;
+}
+
+/**** クレジット ****/
+section#credit {
+  padding: 10rem 0;
+  background-color: #323232;
+  color: white;
+}
+
+section#credit > dl {
+  width: 95%;
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+section#credit > dl > dt {
+  border-bottom: 1px solid lightgray;
+}
+
+section#credit > dl > dd > ul {
+  list-style: none;
+  padding: 0;
+}
+
+section#credit > dl > dd > ul > li {
+  display: block;
+  width: 100%;
+}
+
+section#credit > dl > dd > ul > li::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+section#credit > dl > dd > ul > li > span {
+  display: inline-block;
+  padding: 1rem;
+  white-space: nowrap;
+}
+
+section#credit > dl > dd > ul > li > span.link {
+  float: right;
+}
+
+section#credit > dl > dd > ul > li > span.link > a {
+  color: lightgray;
+}
+
+section#credit > dl > dd > ul > li > span.link > a:hover {
+  text-decoration: none;
+}
+
+section#credit > div.root_link {
+  margin-top: 10rem;
+  text-align: center;
+}
+
+section#credit > div.root_link a {
+  color: white;
+  text-decoration: none;
+}
+
+/**** フッタ ****/
+footer {
+  background-color: #323232;
+  text-align: center;
+  color: darkgray;
+  font-size: 0.8rem;
+  line-height: 2rem;
+}
+
+footer > a {
+  color: darkgray;
+  text-decoration: none;
+}
+
+footer > a:hover {
+  text-decoration: underline;
+}
